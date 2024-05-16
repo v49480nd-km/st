@@ -1,0 +1,15 @@
+diff a/st.c b/st.c	(rejected hunks)
+@@ -1735,11 +1797,11 @@ csihandle(void)
+ 		break;
+ 	case 'S': /* SU -- Scroll <n> line up */
+ 		DEFAULT(csiescseq.arg[0], 1);
+-		tscrollup(term.top, csiescseq.arg[0]);
++		tscrollup(term.top, csiescseq.arg[0], 0);
+ 		break;
+ 	case 'T': /* SD -- Scroll <n> line down */
+ 		DEFAULT(csiescseq.arg[0], 1);
+-		tscrolldown(term.top, csiescseq.arg[0]);
++		tscrolldown(term.top, csiescseq.arg[0], 0);
+ 		break;
+ 	case 'L': /* IL -- Insert <n> blank lines */
+ 		DEFAULT(csiescseq.arg[0], 1);
